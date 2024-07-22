@@ -38,7 +38,7 @@ const App = () => {
 
   const deleteContact = (id) => {
     setContacts((prevContact) => {
-      prevContact.filter((contact) => contact.id !== id);
+      return prevContact.filter((contact) => contact.id !== id);
     });
   };
 
