@@ -28,18 +28,20 @@ const ContactForm = ({ onSubmit }) => {
         onSubmit={handleSubmit}
         validationSchema={registerSchema}
       >
-        <Form>
-          <label>
-            <span>Name</span>
-            <Field name="name" />
-            <ErrorMessage name="name" component="span" />
+        <Form className={s.form}>
+          <label className={s.label}>
+            <span className={s.subtitle}>Name</span>
+            <Field name="name" className={s.input} />
+            <ErrorMessage name="name" component="span" className={s.error} />
           </label>
-          <label>
-            <span>Number</span>
-            <Field name="number" />
-            <ErrorMessage name="number" component="span" />
+          <label className={s.label}>
+            <span className={s.subtitle}>Number</span>
+            <Field name="number" className={s.input} />
+            <ErrorMessage name="number" component="span" className={s.error} />
           </label>
-          <button type="submit">Add contact</button>
+          <button type="submit" className={s.btn}>
+            Add contact
+          </button>
         </Form>
       </Formik>
     </div>

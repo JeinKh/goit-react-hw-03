@@ -7,9 +7,9 @@ const SearchBox = ({ onSearch }) => {
     onSearch(value);
   };
   return (
-    <div>
+    <div className={s.wrapper}>
       <label className={s.label}>
-        <span>Find contact by name:</span>
+        <span className={s.subtitle}>Find contact by name:</span>
         <input
           onChange={handleChange}
           type="text"
